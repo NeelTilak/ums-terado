@@ -1,0 +1,34 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-screen bg-center bg-cover bg-zinc-500 flex items-center justify-center">
+    <div class="w-[25vw] h-auto bg-white px-5 py-4 rounded-md">
+      <h1 class="text-3xl text-center font-semibold tracking-lighter capitalize leading-none text-zinc-700">Registration</h1>
+      <form action="/register" method="post">
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="text" name="fullName" placeholder="fullName" >
+
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="tel" name="mobileNo" placeholder="mobileNo">
+
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="email" name="emailId" placeholder="emailId">
+
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="text" name="address" placeholder="address">
+
+        <label>Qualification:</label><br>
+        <input type="radio" id="qualification10th" name="qualification" value="10th">
+        <label for="qualification10th">10th</label><br>
+        <input type="radio" id="qualification12th" name="qualification" value="12th">
+        <label for="qualification12th">12th</label><br>
+        <input type="radio" id="qualificationGraduation" name="qualification" value="Graduation">
+        <label for="qualificationGraduation">Graduation</label><br>
+
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="text" name="username" placeholder="username">
+
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="password" name="password" placeholder="password">
+
+        <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2 bg-blue-500 text-white rounded-full" type="submit" value="Register">
+
+      </form>
+      <a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full" href="/">Login Existing Account ?</a>
+    </div>
+  </div>
+
+<% include ./partials/footer.ejs %>

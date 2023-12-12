@@ -1,0 +1,15 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-screen bg-center bg-cover bg-[url('https://images.unsplash.com/photo-1606942040878-9a852c5045a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex items-center justify-center">
+  <div class="w-[25vw] h-[60vh] bg-white px-5 py-4 rounded-md">
+    <h1 class="text-3xl text-center font-semibold tracking-lighter capitalize leading-none text-zinc-700">Welcome to UMS</h1>
+    <form action="/login" method="post">
+      <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="text" name="username" placeholder="username" >
+      <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2" type="text" name="password" placeholder="password">
+      <input class="border-2 rounded-md  block mt-2 w-full px-3 py-2 bg-blue-500 text-white rounded-full" type="submit" value="Login">
+    </form>
+    <a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full" href="/register">Dont have an Account ?</a>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>

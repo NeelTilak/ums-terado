@@ -1,0 +1,47 @@
+<% include ./partials/header.ejs %>
+
+<!-- <div class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">List of Registered Users</h2>
+      <ul class="list-disc pl-4">
+        <% users.forEach(ur => { %>
+          <li class="mb-2 text-gray-800"><%= ur.fullName %></li>
+        <% }); %>
+      </ul>
+    </div>
+  </div> -->
+
+
+  <!-- views/userList.ejs -->
+
+<% include ./partials/header.ejs %>
+
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full md:w-2/3 lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">List of Registered Users</h2>
+    <ul class="list-disc pl-4">
+      <% users.forEach(ur => { %>
+        <li class="mb-4 p-4 border border-gray-300 rounded-md shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-gray-800"><%= ur.fullName %></span>
+            <div class="flex space-x-2">
+              <a href="/edit/<%= ur._id %>" class="text-blue-500 hover:underline">Edit</a>
+              <a href="/delete/<%= ur._id %>" class="text-red-500 hover:underline" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+            </div>
+          </div>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>
+
+
+
+  
+
+
+
+  
+<% include ./partials/footer.ejs %>
